@@ -12,7 +12,7 @@ interface MainLayoutProps {
 export function MainLayout({ children }: MainLayoutProps) {
   return (
     <Flex direction="column">
-      <Header />
+      {/* <Header /> */}
 
       <Content>{children}</Content>
 
