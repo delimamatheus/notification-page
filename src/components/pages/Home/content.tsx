@@ -2,6 +2,7 @@ import { Box, Center, Flex, Icon, Image, Text } from '@chakra-ui/react'
 import * as React from 'react'
 import { MessageProps } from '../../../interfaces/Home/IMessage'
 import { NotificationBoxProps } from '../../../interfaces/Home/INotificationBox'
+import { PrivateMessageProps } from '../../../interfaces/Home/IPrivateMessage'
 
 export function Message({
     name,
@@ -34,6 +35,18 @@ export function Message({
     )
 }
 
+export function PrivateMessage({
+    message
+}: PrivateMessageProps){
+    return (
+        <>
+            <Box bgColor={'RGBA(0, 0, 0, 0.04)'} ml={'10px'} boxShadow={'md'} w={'100%'}>
+                <Text p={'10px'}>{message}</Text>
+            </Box>
+        </>
+    )
+}
+
 export function NotificationBox({
     image,
     name,
@@ -56,7 +69,7 @@ export function NotificationBox({
                 </Box>
 
                 {/* Message */}
-                <Box>
+                <Box w={'100%'}>
                     <Message 
                         name={name}
                         message={message}

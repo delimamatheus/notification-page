@@ -1,7 +1,7 @@
 import { Box, Center, Text } from '@chakra-ui/react'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
-import { NotificationBox } from '../components/pages/Home'
+import { NotificationBox, PrivateMessage } from '../components/pages/Home'
 import { MainLayout } from '../layout/MainLayout'
 
 export default function Home() {
@@ -16,11 +16,12 @@ export default function Home() {
       <MainLayout>
         <Center>
           <Box 
-            bgColor={'#E6FFFA'}
+            bgColor={'#FAF5FF'}
             w={'800px'}
             h={'550px'}
             mt={'100px'}
             mb={'100px'}
+            boxShadow={'2xl'}
           >
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}
@@ -47,6 +48,9 @@ export default function Home() {
               action={''}
               time={'1 week ago'}
             >            
+              <PrivateMessage 
+                message='This is just a private message. Please send me a private message too. Now I am writing this just to break the line.'
+              />
             </NotificationBox>
 
             <NotificationBox 
