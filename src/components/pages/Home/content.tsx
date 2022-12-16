@@ -23,16 +23,15 @@ export function NotificationBox({
     message,
     action,
     time,
+    icon,
+    setIcon,
     children
-}: NotificationBoxProps){
-
-
-    const [icon, setIcon] = React.useState(true)
+}: NotificationBoxProps){    
 
     return (
         <>       
             <Box mt={'10px'} mb={'10px'} ml={'50px'} mr={'50px'} display={'flex'} flexDirection='row' minW={'500px'} 
-                onMouseEnter={() => setIcon(false)}
+                onMouseEnter={() => {setIcon}}
             >
                 {/* Profile Picture */}
                 <Box>
@@ -55,7 +54,7 @@ export function NotificationBox({
                         <Text as='b'>
                             {action}
                         </Text>
-                        {icon && (
+                        {{icon} && (
                             <Icon
                                 viewBox='0 0 200 200'
                                 color='red.500'
@@ -79,16 +78,18 @@ export function NotificationBox({
 }
 
 export function NotificationHeader({
-}){
+    icon,
+    setIcon
+}: NotificationHeaderProps){
     return (
         <>
             <Box w={'100%'} display={'flex'} flexDirection={'row'}>
-                <Text ml={'10px'} fontSize={'26px'} textAlign={'left'}>
+                <Text ml={'10px'} fontSize={'26px'}>
                     Notifications                    
                 </Text>          
                 <Box as={'button'} bg={'none'}>
                     <Text fontSize={'12px'}>
-                        Mark all read
+                        Mark all as read
                     </Text>
                 </Box>      
             </Box>

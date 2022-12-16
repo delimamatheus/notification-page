@@ -7,6 +7,12 @@ import { MainLayout } from '../layout/MainLayout'
 
 export default function Home() {  
 
+  const [icon, setIcon] = useState(true)
+
+  const readIconHandler = () => {
+    setIcon(false)
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -27,13 +33,18 @@ export default function Home() {
             display={'flex'}
             flexDirection={'column'}
           >
-            <NotificationHeader />
+            <NotificationHeader 
+              icon={icon} 
+              setIcon={readIconHandler}
+            />
 
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}
               name={'Matheus'}
               message={' followed you '}
               action={''}
+              icon={icon}
+              setIcon={readIconHandler}
               time={'23h ago'}
             >            
             </NotificationBox>
@@ -43,8 +54,7 @@ export default function Home() {
               name={'Andrius'}
               message={' reacted to your recent post '}
               action={'Game Day!'}
-              time={'1d ago'}
-            >            
+              time={'1d ago'} icon={icon} setIcon={readIconHandler}            >            
             </NotificationBox>
 
             <NotificationBox 
@@ -52,8 +62,7 @@ export default function Home() {
               name={'Lucas'}
               message={' sent you a private message '}
               action={''}
-              time={'1 week ago'}
-            >            
+              time={'1 week ago'} icon={icon} setIcon={readIconHandler}            >            
               <PrivateMessage 
                 message='This is just a private message. Please send me a private message too. Now I am writing this just to break the line.'
               />
@@ -64,8 +73,7 @@ export default function Home() {
               name={'Lucas'}
               message={' liked your photo '}
               action={''}
-              time={'1 month ago'}
-            >            
+              time={'1 month ago'} icon={icon} setIcon={readIconHandler}            >            
             </NotificationBox>            
 
             

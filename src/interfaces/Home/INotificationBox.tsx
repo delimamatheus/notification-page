@@ -6,5 +6,7 @@ export interface NotificationBoxProps{
     message: string,
     action: string,
     time: string,
+    icon: boolean,
+    setIcon: () => void,
     children?: ReactNode | ReactNode[] | string,
 }
