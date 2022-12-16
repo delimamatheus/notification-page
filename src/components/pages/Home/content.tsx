@@ -46,6 +46,7 @@ export function NotificationBox({
 
                 {/* Message */}
                 <Box w={'100%'} display={'flex'} flexDirection='column'>
+                    <Box w={'100%'} display={'flex'} flexDirection='column'>
                     <Text ml={'10px'}>
                         <Text as='b'>
                             {name}
@@ -53,11 +54,20 @@ export function NotificationBox({
                         {message}
                         <Text as='b'>
                             {action}
-                        </Text>      
+                        </Text>
                         {icon && (
-                            <Image display={'flex'} alt='icon' src='/image/notification.png' borderRadius={'full'} />
+                            <Icon
+                                viewBox='0 0 200 200'
+                                color='red.500'
+                            >
+                                <path 
+                                    fill='currentColor'
+                                    d='M 100, 100 m -75, 0 a 75, 75 0 1, 0 150, 0 a 75, 75 0 1, 0 -150, 0'
+                                />
+                            </Icon>
                         )}
-                    </Text>
+                    </Text>                
+                    </Box>
                     <Text ml={'10px'} fontSize={'14px'} color='gray'>
                         {time}
                     </Text>
