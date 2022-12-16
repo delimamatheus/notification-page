@@ -1,9 +1,9 @@
-import { Box, Center, Flex, Icon, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, Icon, Image, Text } from '@chakra-ui/react'
 import { BellIcon } from '@chakra-ui/icons'
 import * as React from 'react'
-import { MessageProps } from '../../../interfaces/Home/IMessage'
 import { NotificationBoxProps } from '../../../interfaces/Home/INotificationBox'
 import { PrivateMessageProps } from '../../../interfaces/Home/IPrivateMessage'
+import { NotificationHeaderProps } from '../../../interfaces/Home/INotificationHeader'
 
 export function PrivateMessage({
     message
@@ -74,6 +74,24 @@ export function NotificationBox({
                         {children}
                 </Box>
             </Box>       
+        </>
+    )
+}
+
+export function NotificationHeader({
+}){
+    return (
+        <>
+            <Box w={'100%'} display={'flex'} flexDirection={'row'}>
+                <Text ml={'10px'} fontSize={'26px'} textAlign={'left'}>
+                    Notifications                    
+                </Text>          
+                <Box as={'button'} bg={'none'}>
+                    <Text fontSize={'12px'}>
+                        Mark all read
+                    </Text>
+                </Box>      
+            </Box>
         </>
     )
 }

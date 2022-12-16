@@ -2,7 +2,7 @@ import { Box, Center, Text } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../../styles/Home.module.css'
-import { NotificationBox, PrivateMessage } from '../components/pages/Home'
+import { NotificationBox, NotificationHeader, PrivateMessage } from '../components/pages/Home'
 import { MainLayout } from '../layout/MainLayout'
 
 export default function Home() {  
@@ -27,6 +27,8 @@ export default function Home() {
             display={'flex'}
             flexDirection={'column'}
           >
+            <NotificationHeader />
+
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}
               name={'Matheus'}
