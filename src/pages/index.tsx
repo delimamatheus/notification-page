@@ -1,10 +1,12 @@
 import { Box, Center, Text } from '@chakra-ui/react'
 import Head from 'next/head'
+import { useState } from 'react'
 import styles from '../../styles/Home.module.css'
 import { NotificationBox, PrivateMessage } from '../components/pages/Home'
 import { MainLayout } from '../layout/MainLayout'
 
-export default function Home() {
+export default function Home() {  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,6 +24,8 @@ export default function Home() {
             mt={'100px'}
             mb={'100px'}
             boxShadow={'2xl'}
+            display={'flex'}
+            flexDirection={'column'}
           >
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}
@@ -51,7 +55,7 @@ export default function Home() {
               <PrivateMessage 
                 message='This is just a private message. Please send me a private message too. Now I am writing this just to break the line.'
               />
-            </NotificationBox>
+            </NotificationBox>            
 
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}

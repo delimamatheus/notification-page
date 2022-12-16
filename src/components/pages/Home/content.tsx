@@ -1,39 +1,9 @@
 import { Box, Center, Flex, Icon, Image, Text } from '@chakra-ui/react'
+import { BellIcon } from '@chakra-ui/icons'
 import * as React from 'react'
 import { MessageProps } from '../../../interfaces/Home/IMessage'
 import { NotificationBoxProps } from '../../../interfaces/Home/INotificationBox'
 import { PrivateMessageProps } from '../../../interfaces/Home/IPrivateMessage'
-
-export function Message({
-    name,
-    message,
-    action,
-}: MessageProps){
-    return (
-        <>
-            <Text ml={'10px'}>
-                <Text as='b'>
-                    {name}
-                </Text>
-                {message}
-                <Text as='b'>
-                    {action}
-                </Text>
-                <Icon
-                    viewBox='0 0 200 200'
-                    color='red.500'
-                    opacity='75%'
-                    w='25px'
-                >
-                    <path 
-                        fill='currentColor'
-                        d='M 100, 100 m -75, 0 a 75, 75 0 1, 0 150, 0 a 75, 75 0 1, 0 -150, 0'
-                    />
-                </Icon>
-            </Text>
-        </>
-    )
-}
 
 export function PrivateMessage({
     message
@@ -55,32 +25,45 @@ export function NotificationBox({
     time,
     children
 }: NotificationBoxProps){
+
+
+    const [icon, setIcon] = React.useState(true)
+
     return (
-        <>            
-            <Box mt={'30px'} mb={'30px'} ml={'50px'} mr={'50px'} display={'flex'} flexDirection='row' minW={'500px'}>
+        <>       
+            <Box mt={'10px'} mb={'10px'} ml={'50px'} mr={'50px'} display={'flex'} flexDirection='row' minW={'500px'} 
+                onMouseEnter={() => setIcon(false)}
+            >
                 {/* Profile Picture */}
                 <Box>
                     <Image
-                        borderRadius={'50%'}
+                        borderRadius={'full'}
                         boxSize={'50'}
                         alt='Profile Picture'
                         src={image}
-                    />                    
+                    />
                 </Box>
 
                 {/* Message */}
-                <Box w={'100%'}>
-                    <Message 
-                        name={name}
-                        message={message}
-                        action={action}
-                    />
+                <Box w={'100%'} display={'flex'} flexDirection='column'>
+                    <Text ml={'10px'}>
+                        <Text as='b'>
+                            {name}
+                        </Text>
+                        {message}
+                        <Text as='b'>
+                            {action}
+                        </Text>      
+                        {icon && (
+                            <Image display={'flex'} alt='icon' src='/image/notification.png' borderRadius={'full'} />
+                        )}
+                    </Text>
                     <Text ml={'10px'} fontSize={'14px'} color='gray'>
                         {time}
                     </Text>
-                    {children}
+                        {children}
                 </Box>
-            </Box>            
+            </Box>       
         </>
     )
 }
