@@ -81,15 +81,17 @@ export function NotificationHeader({
 
     return (
         <>
-            <Box w={'100%'} display={'flex'} flexDirection={'row'}>
+            <Box w={'100%'} display={'flex'} flexDirection={'row'}>                
                 <Text ml={'10px'} fontSize={'26px'}>
                     Notifications                    
                 </Text>          
-                <Box as={'button'} bg={'none'} onClick={setIcon}>                    
-                    <Text fontSize={'12px'}>                       
-                        Mark all as read
-                    </Text>
-                </Box>      
+                <Box display={'flex'} flexDirection={'row'} ml={'auto'} mr={'10px'}>
+                    <Box as={'button'} bg={'none'} onClick={setIcon}>                    
+                        <Text fontSize={'12px'}>                       
+                            Mark all as read
+                        </Text>
+                    </Box>      
+                </Box>
             </Box>
         </>
     )
