@@ -51,13 +51,13 @@ Projeto desenvolvido para fins de estudo tendo como base um exercicio do [Fronte
 ### Desktop
 
 <p align="center">
-  <img alt="Desktop" src="![image](https://user-images.githubusercontent.com/43099410/208215311-20966899-43b4-4698-b45b-ff014869b866.png)" width="40%">">
+  <img alt="Desktop" src="https://user-images.githubusercontent.com/43099410/208215311-20966899-43b4-4698-b45b-ff014869b866.png" width="40%">
 </p>
 
 ### Mobile
 
 <p align="center">
-  <img width="16%" alt="Mobile" src="![image](https://user-images.githubusercontent.com/43099410/208215221-47cc9b97-95cb-46d3-9046-91e6d9fa7ab8.png)">
+  <img width="16%" alt="Mobile" src="https://user-images.githubusercontent.com/43099410/208215221-47cc9b97-95cb-46d3-9046-91e6d9fa7ab8.png">
 </p>
 
 ---
@@ -102,7 +102,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## 🦸 Autor
 
 
-<img style="border-radius: 50%;" src="![image](https://user-images.githubusercontent.com/43099410/208215899-be71919d-894a-4782-95c4-de0af85c6377.png)" width="100px;" alt=""/>
+<img style="border-radius: 50%;" src="https://user-images.githubusercontent.com/43099410/208215899-be71919d-894a-4782-95c4-de0af85c6377.png" width="100px;" alt=""/>
 <br />
 <sub><b>Matheus de Lima</b></sub>
 <br />
