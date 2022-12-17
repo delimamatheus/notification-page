@@ -14,7 +14,8 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
+    <Center>
+    <Box>
       <Head>
         <title>Notification Page</title>
         <meta name="description" content="Notification Page" />
@@ -25,8 +26,8 @@ export default function Home() {
         <Center>
           <Box 
             bgColor={'#FAF5FF'}
-            w={'800px'}
-            h={'550px'}
+            w={{base: '300px', lg: '800px'}}
+            h={{base: '500px', lg: '550px'}}
             mt={'100px'}
             mb={'100px'}
             boxShadow={'2xl'}
@@ -82,6 +83,7 @@ export default function Home() {
           </Box>
         </Center>
       </MainLayout>
-    </div>
+    </Box>
+    </Center>
   )
 }

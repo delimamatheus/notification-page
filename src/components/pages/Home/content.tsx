@@ -29,7 +29,7 @@ export function NotificationBox({
 
     return (
         <>       
-            <Box mt={'10px'} mb={'10px'} ml={'50px'} mr={'50px'} display={'flex'} flexDirection='row' minW={'500px'}>
+            <Box mt={'10px'} mb={'10px'} ml={{base:'10px', lg:'50px'}} mr={'50px'} display={'flex'} flexDirection='row' minW={{base:'' ,lg: '500px'}}>
                 {/* Profile Picture */}
                 <Box>
                     <Image
