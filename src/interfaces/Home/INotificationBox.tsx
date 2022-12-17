@@ -7,6 +7,5 @@ export interface NotificationBoxProps{
     action: string,
     time: string,
     icon: boolean,
-    setIcon: () => void,
     children?: ReactNode | ReactNode[] | string,
 }

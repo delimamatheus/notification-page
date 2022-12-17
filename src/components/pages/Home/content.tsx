@@ -24,15 +24,12 @@ export function NotificationBox({
     action,
     time,
     icon,
-    setIcon,
     children
-}: NotificationBoxProps){    
+}: NotificationBoxProps){  
 
     return (
         <>       
-            <Box mt={'10px'} mb={'10px'} ml={'50px'} mr={'50px'} display={'flex'} flexDirection='row' minW={'500px'} 
-                onMouseEnter={() => {setIcon}}
-            >
+            <Box mt={'10px'} mb={'10px'} ml={'50px'} mr={'50px'} display={'flex'} flexDirection='row' minW={'500px'}>
                 {/* Profile Picture */}
                 <Box>
                     <Image
@@ -54,7 +51,7 @@ export function NotificationBox({
                         <Text as='b'>
                             {action}
                         </Text>
-                        {{icon} && (
+                        {icon && (
                             <Icon
                                 viewBox='0 0 200 200'
                                 color='red.500'
@@ -81,14 +78,15 @@ export function NotificationHeader({
     icon,
     setIcon
 }: NotificationHeaderProps){
+
     return (
         <>
             <Box w={'100%'} display={'flex'} flexDirection={'row'}>
                 <Text ml={'10px'} fontSize={'26px'}>
                     Notifications                    
                 </Text>          
-                <Box as={'button'} bg={'none'}>
-                    <Text fontSize={'12px'}>
+                <Box as={'button'} bg={'none'} onClick={setIcon}>                    
+                    <Text fontSize={'12px'}>                       
                         Mark all as read
                     </Text>
                 </Box>      

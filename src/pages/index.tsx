@@ -44,25 +44,27 @@ export default function Home() {
               message={' followed you '}
               action={''}
               icon={icon}
-              setIcon={readIconHandler}
               time={'23h ago'}
-            >            
-            </NotificationBox>
+            />                        
 
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}
               name={'Andrius'}
               message={' reacted to your recent post '}
               action={'Game Day!'}
-              time={'1d ago'} icon={icon} setIcon={readIconHandler}            >            
-            </NotificationBox>
+              time={'1d ago'}
+              icon={icon}
+            />            
+            
 
             <NotificationBox 
               image={'https://bit.ly/dan-abramov'}
               name={'Lucas'}
               message={' sent you a private message '}
               action={''}
-              time={'1 week ago'} icon={icon} setIcon={readIconHandler}            >            
+              time={'1 week ago'}
+              icon={icon}
+            >            
               <PrivateMessage 
                 message='This is just a private message. Please send me a private message too. Now I am writing this just to break the line.'
               />
@@ -73,9 +75,9 @@ export default function Home() {
               name={'Lucas'}
               message={' liked your photo '}
               action={''}
-              time={'1 month ago'} icon={icon} setIcon={readIconHandler}            >            
-            </NotificationBox>            
-
+              time={'1 month ago'}
+              icon={icon}
+            />            
             
           </Box>
         </Center>
