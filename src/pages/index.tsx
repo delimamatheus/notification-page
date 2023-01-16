@@ -15,16 +15,16 @@ export default function Home() {
 
   return (
     <Center>
-    <Box>
       <Head>
         <title>Notification Page</title>
         <meta name="description" content="Notification Page" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> 
 
       <MainLayout>
         <Center>
-          <Box 
+          <Box
+            as='ul'         
             bgColor={'#FAF5FF'}
             w={{base: '300px', lg: '800px'}}
             h={{base: '500px', lg: '550px'}}
@@ -78,12 +78,11 @@ export default function Home() {
               action={''}
               time={'1 month ago'}
               icon={icon}
-            />            
+            />         
             
           </Box>
         </Center>
       </MainLayout>
-    </Box>
     </Center>
   )
 }

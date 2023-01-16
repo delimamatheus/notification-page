@@ -29,9 +29,9 @@ export function NotificationBox({
 
     return (
         <>       
-            <Box mt={'10px'} mb={'10px'} ml={{base:'10px', lg:'50px'}} mr={'50px'} display={'flex'} flexDirection='row' minW={{base:'' ,lg: '500px'}}>
+            <Box as='li' mt={'10px'} mb={'10px'} ml={{base:'10px', lg:'50px'}} mr={'50px'} display={'flex'} flexDirection='row' minW={{base:'' ,lg: '500px'}}>
                 {/* Profile Picture */}
-                <Box>
+                <Box as='image'>
                     <Image
                         borderRadius={'full'}
                         boxSize={'50'}
@@ -81,7 +81,7 @@ export function NotificationHeader({
 
     return (
         <>
-            <Box w={'100%'} display={'flex'} flexDirection={'row'}>                
+            <Box as='li' w={'100%'} display={'flex'} flexDirection={'row'}>   
                 <Text ml={'10px'} fontSize={'26px'}>
                     Notifications                    
                 </Text>          

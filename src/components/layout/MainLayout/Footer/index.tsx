@@ -4,7 +4,7 @@ import { Image } from '@chakra-ui/image'
 export function Footer() {
   return (
     <Center>
-      <Box 
+      <Box        
         display={'flex'}
         flexDirection='row'
       >
